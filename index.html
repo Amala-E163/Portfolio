@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Amalachukwu Ekpunobi | TN-Eligible Product Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="TN-eligible Product Manager with fintech, payments, and SaaS experience. Open to remote U.S. roles."
+  />
+
+  <!-- Optional Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #0b1020;
+      --card: #111827;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.08);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2933;
+      --danger: #ef4444;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.65);
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 24px 16px 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: var(--max-width);
+    }
+
+    /* Header / Nav */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .avatar {
+      height: 40px;
+      width: 40px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #38bdf8, #0f172a);
+      box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      color: #e5f4ff;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-text span:first-child {
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      font-size: 14px;
+    }
+
+    .brand-text span:last-child {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .pill {
+      border-radius: 999px;
+      padding: 6px 10px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+    }
+
+    .nav-links a.nav-link {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .nav-links a.nav-link:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* Layout blocks */
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    section {
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.1), #020617);
+      border-radius: var(--radius-xl);
+      padding: 22px 22px 20px;
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 120% -30%, rgba(56, 189, 248, 0.25), transparent 55%);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-compact {
+      background: linear-gradient(to bottom right, #020617, #020617);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      padding: 16px 18px 14px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      border-radius: 999px;
+      padding: 4px 10px;
+      background: rgba(15, 23, 42, 0.85);
+      color: var(--muted);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .chip-accent {
+      background: var(--accent-soft);
+      color: #e0f7ff;
+      border-color: rgba(56, 189, 248, 0.45);
+    }
+
+    /* Hero */
+    .hero-title {
+      font-size: clamp(26px, 3vw, 32px);
+      font-weight: 600;
+      margin: 10px 0 6px;
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 480px;
+    }
+
+    .hero-subtitle strong {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .hero-cta {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 13px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease-out;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: radial-gradient(circle at top left, #38bdf8, #0369a1);
+      color: #e5f4ff;
+      border-color: rgba(56, 189, 248, 0.2);
+      box-shadow: 0 14px 30px rgba(8, 47, 73, 0.55);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(8, 47, 73, 0.75);
+      text-decoration: none;
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--muted);
+      border-color: rgba(148, 163, 184, 0.4);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .btn span.icon {
+      font-size: 14px;
+    }
+
+    /* Sections */
+    .section-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .section-title span {
+      color: var(--accent);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .skill-pill {
+      font-size: 12px;
+      border-radius: 999px;
+      padding: 6px 9px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(8px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .skill-pill span.label {
+      max-width: 110px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.9);
+    }
+
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .exp-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .exp-main {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .exp-role {
+      font-weight: 500;
+    }
+
+    .exp-company {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .exp-meta {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .exp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .exp-tag {
+      font-size: 11px;
+      padding: 3px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .project-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: linear-gradient(
+        to bottom right,
+        rgba(15, 23, 42, 0.95),
+        rgba(15, 23, 42, 0.9)
+      );
+      padding: 10px 11px 9px;
+      font-size: 13px;
+    }
+
+    .project-title {
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .project-meta {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .project-impact {
+      font-size: 12px;
+      color: #d1d5db;
+    }
+
+    .tn-box {
+      border-radius: var(--radius-lg);
+      border: 1px dashed rgba(56, 189, 248, 0.5);
+      padding: 10px 12px 10px;
+      background: radial-gradient(circle at top left, var(--accent-soft), #020617);
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    .tn-box h4 {
+      font-size: 13px;
+      margin-bottom: 4px;
+      color: #e0faff;
+    }
+
+    .tn-box ul {
+      margin-left: 16px;
+    }
+
+    .tn-box li {
+      margin-bottom: 2px;
+    }
+
+    .contact-card {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .contact-item {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .contact-item strong {
+      color: #e5e7eb;
+      font-weight: 500;
+      font-size: 12px;
+    }
+
+    footer {
+      margin-top: 26px;
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    footer span {
+      color: var(--accent);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="shell">
+      <header>
+        <div class="brand">
+          <div class="avatar" aria-hidden="true">AE</div>
+          <div class="brand-text">
+            <span>Amalachukwu Ekpunobi</span>
+            <span>Product Manager · Fintech · TN-Eligible</span>
+          </div>
+        </div>
+
+        <div class="nav-links">
+          <div class="pill" aria-label="Open to work, TN-Eligible">
+            <span class="pill-dot"></span>
+            Open to Remote U.S. · TN
+          </div>
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#projects">Case Studies</a>
+          <a class="nav-link" href="#tn">TN Eligibility</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
+      </header>
+
+      <main>
+        <!-- Left Column -->
+        <div>
+          <!-- Hero -->
+          <section class="card" aria-labelledby="hero-heading">
+            <div class="card-inner">
+              <div class="chip chip-accent">Product Manager · Fintech · Payments</div>
+              <h1 id="hero-heading" class="hero-title">
+                Building trustworthy financial products that just work.
+              </h1>
+              <p class="hero-subtitle">
+                I’m a <strong>TN-eligible Product Manager</strong> based in Canada, focused on
+                <strong>payments, cards, lending, and SaaS</strong>. I translate complex financial
+                and technical requirements into clear, shippable product outcomes.
+              </p>
+
+              <div class="hero-cta">
+                <!-- TODO: Replace with your real email + LinkedIn -->
+                <a class="btn btn-primary" href="mailto:youremail@example.com">
+                  <span class="icon">✉️</span>
+                  <span>Contact me about a role</span>
+                </a>
+                <a
+                  class="btn btn-ghost"
+                  href="https://www.linkedin.com/in/your-linkedin"
+                  target="_blank"
+                >
+                  <span class="icon">🔗</span>
+                  <span>View my LinkedIn</span>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Skills -->
+          <section aria-labelledby="skills-heading">
+            <div class="card-compact">
+              <h2 id="skills-heading" class="section-title">
+                Core <span>Capabilities</span>
+              </h2>
+              <div class="skills-grid">
+                <div class="skill-pill">
+                  <span class="label">Product strategy & roadmaps</span>
+                  <span class="badge-dot"></span>
+                </div>
+                <div class="skill-pill">
+                  <span class="label">Systems analysis & workflows</span>
+                  <span class="badge-dot"></span>
+                </div>
+                <div class="skill-pill">
+                  <span class="label">Payments, cards, BNPL, lending</span>
+                  <span class="badge-dot"></span>
+                </div>
+                <div class="skill-pill">
+                  <span class="label">API & integration requirements</span>
+                  <span class="badge-dot"></span>
+                </div>
+                <div class="skill-pill">
+                  <span class="label">PRDs, user stories, acceptance criteria</span>
+                  <span class="badge-dot"></span>
+                </div>
+                <div class="skill-pill">
+                  <span class="label">Data-driven decisions (SQL, Python, R)</span>
+                  <span class="badge-dot"></span>
+                </div>
+                <div class="skill-pill">
+                  <span class="label">Risk, KYC, and compliance thinking</span>
+                  <span class="badge-dot"></span>
+                </div>
+                <div class="skill-pill">
+                  <span class="label">Cross-functional stakeholder alignment</span>
+                  <span class="badge-dot"></span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Experience -->
+          <section id="experience" aria-labelledby="experience-heading">
+            <div class="card-compact">
+              <h2 id="experience-heading" class="section-title">
+                Selected <span>Experience</span>
+              </h2>
+              <div class="experience-list">
+                <article class="exp-item">
+                  <div class="exp-main">
+                    <div class="exp-role">Product Analyst (Technical PM)</div>
+                    <div class="exp-company">Payworks · Payroll & Payments SaaS</div>
+                    <div class="exp-tags">
+                      <span class="exp-tag">Requirements & systems analysis</span>
+                      <span class="exp-tag">Payroll & payments</span>
+                      <span class="exp-tag">Technical documentation</span>
+                    </div>
+                  </div>
+                  <div class="exp-meta">
+                    <div>Winnipeg, Canada</div>
+                    <div>2023 – 2024</div>
+                  </div>
+                </article>
+
+                <article class="exp-item">
+                  <div class="exp-main">
+                    <div class="exp-role">Product Manager · BNPL & Lending</div>
+                    <div class="exp-company">Crednet (CredPal) · Fintech</div>
+                    <div class="exp-tags">
+                      <span class="exp-tag">BNPL & loan flows</span>
+                      <span class="exp-tag">Risk & decisioning</span>
+                    </div>
+                  </div>
+                  <div class="exp-meta">
+                    <div>Remote</div>
+                    <div>2021 – 2022</div>
+                  </div>
+                </article>
+
+                <article class="exp-item">
+                  <div class="exp-main">
+                    <div class="exp-role">Product Manager · Cards</div>
+                    <div class="exp-company">Union Bank · Card Issuing & Acquiring</div>
+                    <div class="exp-tags">
+                      <span class="exp-tag">Card rails</span>
+                      <span class="exp-tag">Issuing & acquiring</span>
+                      <span class="exp-tag">Disputes & chargebacks</span>
+                    </div>
+                  </div>
+                  <div class="exp-meta">
+                    <div>Hybrid</div>
+                    <div>2020 – 2021</div>
+                  </div>
+                </article>
+
+                <article class="exp-item">
+                  <div class="exp-main">
+                    <div class="exp-role">Product Manager · Marketplace SaaS</div>
+                    <div class="exp-company">Snappy Plaza</div>
+                    <div class="exp-tags">
+                      <span class="exp-tag">Merchant onboarding</span>
+                      <span class="exp-tag">Marketplace operations</span>
+                    </div>
+                  </div>
+                  <div class="exp-meta">
+                    <div>2018 – 2019</div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Right Column -->
+        <div>
+          <!-- Case Studies -->
+          <section id="projects" aria-labelledby="projects-heading">
+            <div class="card-compact">
+              <h2 id="projects-heading" class="section-title">
+                Product <span>Case Studies</span>
+              </h2>
+              <div class="projects-grid">
+                <article class="project-card">
+                  <div class="project-title">Real-time Payroll Payment Validation</div>
+                  <div class="project-meta">Payworks · Systems analysis & risk reduction</div>
+                  <p class="project-impact">
+                    Led requirements and workflow design for a real-time validation layer that
+                    checked bank data, remittance rules, and cutoff times before payroll
+                    execution—reducing payment errors by an estimated 25–30% and saving support
+                    hours across multiple teams.
+                  </p>
+                </article>
+
+                <article class="project-card">
+                  <div class="project-title">BNPL Credit Decisioning Redesign</div>
+                  <div class="project-meta">Crednet (CredPal) · Lending & risk</div>
+                  <p class="project-impact">
+                    Rebuilt loan application flows and risk rules in collaboration with
+                    engineering and data partners. Clarified decisioning inputs, created API
+                    specs, and streamlined KYC checks, improving approval speed by ~35% while
+                    keeping NPLs under control.
+                  </p>
+                </article>
+
+                <article class="project-card">
+                  <div class="project-title">Card Disputes & Chargeback Workflows</div>
+                  <div class="project-meta">Union Bank · Issuing & acquiring</div>
+                  <p class="project-impact">
+                    Documented and optimized end-to-end dispute flows, from transaction
+                    ingestion to resolution. Created clear system diagrams and requirements for
+                    processors and vendors, reducing average resolution time and improving agent
+                    experience.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <!-- TN Eligibility -->
+          <section id="tn" aria-labelledby="tn-heading">
+            <div class="card-compact">
+              <h2 id="tn-heading" class="section-title">
+                Why Hiring Me is <span>Low Friction</span> for U.S. Teams
+          
